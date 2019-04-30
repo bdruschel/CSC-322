@@ -1,0 +1,68 @@
+PHASE 1:
+Crikey! I have lost my mojo!
+
+How I found it: In GDB, I wrote 'print (char *) $rbp'
+   + Turns out register %rbp (which was pushed to the stack for function string_not_equal) 
+     contains this string
+   + This can also be found in strings.txt
+   
+= = = = = = = = = = = = = = = = = = = = = = = = 
+
+PHASE 2:
+6 7 9 12 16 21
+
+How I found it: First off, it should be clear that the input is
+looking for six integers, as seen with the method "read_six_numers".
+   + After verifying that six numbers have been entered, Phase_2 does a check;
+     a sequence of lines beginning at 400f7a. Here, an int %ebx starts as a
+     decimal 1, and is incremented each time a check through the inputted numbers
+     holds true (beginning at '6'). %ebx is added into %eax, which is incremented
+     by the current number input being read afterwards.
+     So, starting at 6, %eax expects a 7 next (6 + 1), then a 9 (7+2), then 12 (9+3)
+     ... and so on until 21. And it works!!
+     
+NOTE: Phase 2 simply expects a pattern of 6 numbers - you don't
+      need to start the sequence at 6.
+      For example: "1 2 4 7 11 16" is also an acceptable input.
+     
+= = = = = = = = = = = = = = = = = = = = = = = = 
+     
+PHASE 3:
+1 152
+
+what?????
+
+= = = = = = = = = = = = = = = = = = = = = = = = 
+
+PHASE 4:
+14 7
+
+I wouldn't be lying if I said that about a third of figuring this out was purely
+brute-force
+
+= = = = = = = = = = = = = = = = = = = = = = = = 
+
+PHASE 5:
+ionuvg
+
+= = = = = = = = = = = = = = = = = = = = = = = = 
+
+PHASE 6:
+2 5 3 6 4 1
+
+FUCK YEAH MOTHERFUCKER
+
+= = = = = = = = = = = = = = = = = = = = = = = = 
+
+
+Crikey! I have lost my mojo!
+
+6 7 9 12 16 21
+
+1 152
+
+14 7
+
+ionuvg
+
+2 5 3 6 4 1

@@ -1,0 +1,8 @@
+CSC 322 LAB 1: MATHEMATICAL COMMANDS
+Programmed by: Brandon Druschel
+Student ID: 804085455
+
+TO RUN PROGRAM:
+1. Log into a CS Linux machine and open the terminal
+2. Compile the '.c' file using GCC
+3. Run program via the terminal
